@@ -1,0 +1,1220 @@
+{
+  "nakshatras": [
+    {
+      "index": 0,
+      "slug": "ashwini",
+      "name": "Ashwini",
+      "deity": "Ashwini",
+      "planet": "Ketu",
+      "rashi": "Mesha",
+      "padas": [
+        {
+          "dev": "चु",
+          "latin": "Chu"
+        },
+        {
+          "dev": "चे",
+          "latin": "Che"
+        },
+        {
+          "dev": "चो",
+          "latin": "Cho"
+        },
+        {
+          "dev": "ला",
+          "latin": "Laa"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "slug": "bharani",
+      "name": "Bharani",
+      "deity": "Yama",
+      "planet": "Venus",
+      "rashi": "Mesha",
+      "padas": [
+        {
+          "dev": "ली",
+          "latin": "Lee"
+        },
+        {
+          "dev": "लू",
+          "latin": "Loo"
+        },
+        {
+          "dev": "ले",
+          "latin": "Le"
+        },
+        {
+          "dev": "लो",
+          "latin": "Lo"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "slug": "krittika",
+      "name": "Krittika",
+      "deity": "Agni",
+      "planet": "Sun",
+      "rashi": null,
+      "padas": [
+        {
+          "dev": "अ",
+          "latin": "A"
+        },
+        {
+          "dev": "ई",
+          "latin": "Ee"
+        },
+        {
+          "dev": "उ",
+          "latin": "U"
+        },
+        {
+          "dev": "ए",
+          "latin": "E"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "slug": "rohini",
+      "name": "Rohini",
+      "deity": "Brahma",
+      "planet": "Moon",
+      "rashi": "Vrishabha",
+      "padas": [
+        {
+          "dev": "ओ",
+          "latin": "O"
+        },
+        {
+          "dev": "वा",
+          "latin": "Vaa"
+        },
+        {
+          "dev": "वी",
+          "latin": "Vee"
+        },
+        {
+          "dev": "वु",
+          "latin": "Vu"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "slug": "mrigashira",
+      "name": "Mrigashira",
+      "deity": "Soma",
+      "planet": "Mars",
+      "rashi": null,
+      "padas": [
+        {
+          "dev": "वे",
+          "latin": "Ve"
+        },
+        {
+          "dev": "वो",
+          "latin": "Vo"
+        },
+        {
+          "dev": "का",
+          "latin": "Kaa"
+        },
+        {
+          "dev": "की",
+          "latin": "Kee"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "slug": "ardra",
+      "name": "Ardra",
+      "deity": "Rudra",
+      "planet": "Rahu",
+      "rashi": "Mithuna",
+      "padas": [
+        {
+          "dev": "कु",
+          "latin": "Ku"
+        },
+        {
+          "dev": "घ",
+          "latin": "Gha"
+        },
+        {
+          "dev": "ङ",
+          "latin": "Ing"
+        },
+        {
+          "dev": "छ",
+          "latin": "Chha"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "slug": "punarvasu",
+      "name": "Punarvasu",
+      "deity": "Aditi",
+      "planet": "Jupiter",
+      "rashi": null,
+      "padas": [
+        {
+          "dev": "के",
+          "latin": "Ke"
+        },
+        {
+          "dev": "को",
+          "latin": "Ko"
+        },
+        {
+          "dev": "हा",
+          "latin": "Haa"
+        },
+        {
+          "dev": "ही",
+          "latin": "Hee"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "slug": "pushya",
+      "name": "Pushya",
+      "deity": "Brihaspati",
+      "planet": "Saturn",
+      "rashi": "Karka",
+      "padas": [
+        {
+          "dev": "हु",
+          "latin": "Hu"
+        },
+        {
+          "dev": "हे",
+          "latin": "He"
+        },
+        {
+          "dev": "हो",
+          "latin": "Ho"
+        },
+        {
+          "dev": "डा",
+          "latin": "Daa"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "slug": "ashlesha",
+      "name": "Ashlesha",
+      "deity": "Nagas",
+      "planet": "Mercury",
+      "rashi": "Karka",
+      "padas": [
+        {
+          "dev": "डी",
+          "latin": "Dee"
+        },
+        {
+          "dev": "डू",
+          "latin": "Doo"
+        },
+        {
+          "dev": "डे",
+          "latin": "De"
+        },
+        {
+          "dev": "डो",
+          "latin": "Do"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "slug": "magha",
+      "name": "Magha",
+      "deity": "Pitris",
+      "planet": "Ketu",
+      "rashi": "Simha",
+      "padas": [
+        {
+          "dev": "मा",
+          "latin": "Maa"
+        },
+        {
+          "dev": "मी",
+          "latin": "Mee"
+        },
+        {
+          "dev": "मू",
+          "latin": "Moo"
+        },
+        {
+          "dev": "मे",
+          "latin": "Me"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "slug": "purva-phalguni",
+      "name": "Purva Phalguni",
+      "deity": "Bhaga",
+      "planet": "Venus",
+      "rashi": "Simha",
+      "padas": [
+        {
+          "dev": "मो",
+          "latin": "Mo"
+        },
+        {
+          "dev": "टा",
+          "latin": "Taa"
+        },
+        {
+          "dev": "टी",
+          "latin": "Tee"
+        },
+        {
+          "dev": "टू",
+          "latin": "Too"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "slug": "uttara-phalguni",
+      "name": "Uttara Phalguni",
+      "deity": "Aryaman",
+      "planet": "Sun",
+      "rashi": null,
+      "padas": [
+        {
+          "dev": "टे",
+          "latin": "Te"
+        },
+        {
+          "dev": "टो",
+          "latin": "To"
+        },
+        {
+          "dev": "पा",
+          "latin": "Paa"
+        },
+        {
+          "dev": "पी",
+          "latin": "Pee"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "slug": "hasta",
+      "name": "Hasta",
+      "deity": "Savitar",
+      "planet": "Moon",
+      "rashi": "Kanya",
+      "padas": [
+        {
+          "dev": "पू",
+          "latin": "Poo"
+        },
+        {
+          "dev": "ष",
+          "latin": "Sha"
+        },
+        {
+          "dev": "ण",
+          "latin": "Na"
+        },
+        {
+          "dev": "ठ",
+          "latin": "Tha"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "slug": "chitra",
+      "name": "Chitra",
+      "deity": "Tvashtar",
+      "planet": "Mars",
+      "rashi": null,
+      "padas": [
+        {
+          "dev": "पे",
+          "latin": "Pe"
+        },
+        {
+          "dev": "पो",
+          "latin": "Po"
+        },
+        {
+          "dev": "रा",
+          "latin": "Raa"
+        },
+        {
+          "dev": "री",
+          "latin": "Ree"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "slug": "swati",
+      "name": "Swati",
+      "deity": "Vayu",
+      "planet": "Rahu",
+      "rashi": "Tula",
+      "padas": [
+        {
+          "dev": "रू",
+          "latin": "Roo"
+        },
+        {
+          "dev": "रे",
+          "latin": "Re"
+        },
+        {
+          "dev": "रो",
+          "latin": "Ro"
+        },
+        {
+          "dev": "ता",
+          "latin": "Taa"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "slug": "vishakha",
+      "name": "Vishakha",
+      "deity": "Indra",
+      "planet": "Jupiter",
+      "rashi": null,
+      "padas": [
+        {
+          "dev": "ती",
+          "latin": "Tee"
+        },
+        {
+          "dev": "तू",
+          "latin": "Too"
+        },
+        {
+          "dev": "ते",
+          "latin": "Te"
+        },
+        {
+          "dev": "तो",
+          "latin": "To"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "slug": "anuradha",
+      "name": "Anuradha",
+      "deity": "Mitra",
+      "planet": "Saturn",
+      "rashi": "Vrischika",
+      "padas": [
+        {
+          "dev": "ना",
+          "latin": "Naa"
+        },
+        {
+          "dev": "नी",
+          "latin": "Nee"
+        },
+        {
+          "dev": "नू",
+          "latin": "Noo"
+        },
+        {
+          "dev": "ने",
+          "latin": "Ne"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "slug": "jyeshtha",
+      "name": "Jyeshtha",
+      "deity": "Indra",
+      "planet": "Mercury",
+      "rashi": "Vrischika",
+      "padas": [
+        {
+          "dev": "नो",
+          "latin": "No"
+        },
+        {
+          "dev": "या",
+          "latin": "Yaa"
+        },
+        {
+          "dev": "यी",
+          "latin": "Yee"
+        },
+        {
+          "dev": "यू",
+          "latin": "Yoo"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "slug": "mula",
+      "name": "Mula",
+      "deity": "Nirriti",
+      "planet": "Ketu",
+      "rashi": "Dhanu",
+      "padas": [
+        {
+          "dev": "ये",
+          "latin": "Ye"
+        },
+        {
+          "dev": "यो",
+          "latin": "Yo"
+        },
+        {
+          "dev": "भा",
+          "latin": "Bhaa"
+        },
+        {
+          "dev": "भी",
+          "latin": "Bhee"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "slug": "purva-ashadha",
+      "name": "Purva Ashadha",
+      "deity": "Apas",
+      "planet": "Venus",
+      "rashi": "Dhanu",
+      "padas": [
+        {
+          "dev": "भू",
+          "latin": "Bhoo"
+        },
+        {
+          "dev": "धा",
+          "latin": "Dhaa"
+        },
+        {
+          "dev": "फा",
+          "latin": "Phaa"
+        },
+        {
+          "dev": "ढ",
+          "latin": "Dha"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "slug": "uttara-ashadha",
+      "name": "Uttara Ashadha",
+      "deity": "Vishvedevas",
+      "planet": "Sun",
+      "rashi": null,
+      "padas": [
+        {
+          "dev": "भे",
+          "latin": "Bhe"
+        },
+        {
+          "dev": "भो",
+          "latin": "Bho"
+        },
+        {
+          "dev": "जा",
+          "latin": "Jaa"
+        },
+        {
+          "dev": "जी",
+          "latin": "Jee"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "slug": "shravana",
+      "name": "Shravana",
+      "deity": "Vishnu",
+      "planet": "Moon",
+      "rashi": "Makara",
+      "padas": [
+        {
+          "dev": "खी",
+          "latin": "Khee"
+        },
+        {
+          "dev": "खू",
+          "latin": "Khoo"
+        },
+        {
+          "dev": "खे",
+          "latin": "Khe"
+        },
+        {
+          "dev": "खो",
+          "latin": "Kho"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "slug": "dhanishtha",
+      "name": "Dhanishtha",
+      "deity": "Eight",
+      "planet": "Mars",
+      "rashi": null,
+      "padas": [
+        {
+          "dev": "गा",
+          "latin": "Gaa"
+        },
+        {
+          "dev": "गी",
+          "latin": "Gee"
+        },
+        {
+          "dev": "गु",
+          "latin": "Gu"
+        },
+        {
+          "dev": "गे",
+          "latin": "Ge"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "slug": "shatabhisha",
+      "name": "Shatabhisha",
+      "deity": "Varuna",
+      "planet": "Rahu",
+      "rashi": "Kumbha",
+      "padas": [
+        {
+          "dev": "गो",
+          "latin": "Go"
+        },
+        {
+          "dev": "सा",
+          "latin": "Saa"
+        },
+        {
+          "dev": "सी",
+          "latin": "See"
+        },
+        {
+          "dev": "सू",
+          "latin": "Soo"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "slug": "purva-bhadrapada",
+      "name": "Purva Bhadrapada",
+      "deity": "Aja",
+      "planet": "Jupiter",
+      "rashi": null,
+      "padas": [
+        {
+          "dev": "से",
+          "latin": "Se"
+        },
+        {
+          "dev": "सो",
+          "latin": "So"
+        },
+        {
+          "dev": "दा",
+          "latin": "Daa"
+        },
+        {
+          "dev": "दी",
+          "latin": "Dee"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "slug": "uttara-bhadrapada",
+      "name": "Uttara Bhadrapada",
+      "deity": "Ahir",
+      "planet": "Saturn",
+      "rashi": "Meena",
+      "padas": [
+        {
+          "dev": "दू",
+          "latin": "Doo"
+        },
+        {
+          "dev": "थ",
+          "latin": "Tha"
+        },
+        {
+          "dev": "झ",
+          "latin": "Jha"
+        },
+        {
+          "dev": "ञ",
+          "latin": "Yna"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "slug": "revati",
+      "name": "Revati",
+      "deity": "Pushan",
+      "planet": "Mercury",
+      "rashi": "Meena",
+      "padas": [
+        {
+          "dev": "दे",
+          "latin": "De"
+        },
+        {
+          "dev": "दो",
+          "latin": "Do"
+        },
+        {
+          "dev": "च",
+          "latin": "Cha"
+        },
+        {
+          "dev": "ची",
+          "latin": "Chee"
+        }
+      ]
+    }
+  ],
+  "rashis": [
+    {
+      "index": 0,
+      "slug": "mesha",
+      "name": "Mesha",
+      "sounds": [
+        {
+          "dev": "चु",
+          "latin": "Chu"
+        },
+        {
+          "dev": "चे",
+          "latin": "Che"
+        },
+        {
+          "dev": "चो",
+          "latin": "Cho"
+        },
+        {
+          "dev": "ला",
+          "latin": "Laa"
+        },
+        {
+          "dev": "ली",
+          "latin": "Lee"
+        },
+        {
+          "dev": "लू",
+          "latin": "Loo"
+        },
+        {
+          "dev": "ले",
+          "latin": "Le"
+        },
+        {
+          "dev": "लो",
+          "latin": "Lo"
+        },
+        {
+          "dev": "अ",
+          "latin": "A"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "slug": "vrishabha",
+      "name": "Vrishabha",
+      "sounds": [
+        {
+          "dev": "ई",
+          "latin": "Ee"
+        },
+        {
+          "dev": "उ",
+          "latin": "U"
+        },
+        {
+          "dev": "ए",
+          "latin": "E"
+        },
+        {
+          "dev": "ओ",
+          "latin": "O"
+        },
+        {
+          "dev": "वा",
+          "latin": "Vaa"
+        },
+        {
+          "dev": "वी",
+          "latin": "Vee"
+        },
+        {
+          "dev": "वु",
+          "latin": "Vu"
+        },
+        {
+          "dev": "वे",
+          "latin": "Ve"
+        },
+        {
+          "dev": "वो",
+          "latin": "Vo"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "slug": "mithuna",
+      "name": "Mithuna",
+      "sounds": [
+        {
+          "dev": "का",
+          "latin": "Kaa"
+        },
+        {
+          "dev": "की",
+          "latin": "Kee"
+        },
+        {
+          "dev": "कु",
+          "latin": "Ku"
+        },
+        {
+          "dev": "घ",
+          "latin": "Gha"
+        },
+        {
+          "dev": "ङ",
+          "latin": "Ing"
+        },
+        {
+          "dev": "छ",
+          "latin": "Chha"
+        },
+        {
+          "dev": "के",
+          "latin": "Ke"
+        },
+        {
+          "dev": "को",
+          "latin": "Ko"
+        },
+        {
+          "dev": "हा",
+          "latin": "Haa"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "slug": "karka",
+      "name": "Karka",
+      "sounds": [
+        {
+          "dev": "ही",
+          "latin": "Hee"
+        },
+        {
+          "dev": "हु",
+          "latin": "Hu"
+        },
+        {
+          "dev": "हे",
+          "latin": "He"
+        },
+        {
+          "dev": "हो",
+          "latin": "Ho"
+        },
+        {
+          "dev": "डा",
+          "latin": "Daa"
+        },
+        {
+          "dev": "डी",
+          "latin": "Dee"
+        },
+        {
+          "dev": "डू",
+          "latin": "Doo"
+        },
+        {
+          "dev": "डे",
+          "latin": "De"
+        },
+        {
+          "dev": "डो",
+          "latin": "Do"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "slug": "simha",
+      "name": "Simha",
+      "sounds": [
+        {
+          "dev": "मा",
+          "latin": "Maa"
+        },
+        {
+          "dev": "मी",
+          "latin": "Mee"
+        },
+        {
+          "dev": "मू",
+          "latin": "Moo"
+        },
+        {
+          "dev": "मे",
+          "latin": "Me"
+        },
+        {
+          "dev": "मो",
+          "latin": "Mo"
+        },
+        {
+          "dev": "टा",
+          "latin": "Taa"
+        },
+        {
+          "dev": "टी",
+          "latin": "Tee"
+        },
+        {
+          "dev": "टू",
+          "latin": "Too"
+        },
+        {
+          "dev": "टे",
+          "latin": "Te"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "slug": "kanya",
+      "name": "Kanya",
+      "sounds": [
+        {
+          "dev": "टो",
+          "latin": "To"
+        },
+        {
+          "dev": "पा",
+          "latin": "Paa"
+        },
+        {
+          "dev": "पी",
+          "latin": "Pee"
+        },
+        {
+          "dev": "पू",
+          "latin": "Poo"
+        },
+        {
+          "dev": "ष",
+          "latin": "Sha"
+        },
+        {
+          "dev": "ण",
+          "latin": "Na"
+        },
+        {
+          "dev": "ठ",
+          "latin": "Tha"
+        },
+        {
+          "dev": "पे",
+          "latin": "Pe"
+        },
+        {
+          "dev": "पो",
+          "latin": "Po"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "slug": "tula",
+      "name": "Tula",
+      "sounds": [
+        {
+          "dev": "रा",
+          "latin": "Raa"
+        },
+        {
+          "dev": "री",
+          "latin": "Ree"
+        },
+        {
+          "dev": "रू",
+          "latin": "Roo"
+        },
+        {
+          "dev": "रे",
+          "latin": "Re"
+        },
+        {
+          "dev": "रो",
+          "latin": "Ro"
+        },
+        {
+          "dev": "ता",
+          "latin": "Taa"
+        },
+        {
+          "dev": "ती",
+          "latin": "Tee"
+        },
+        {
+          "dev": "तू",
+          "latin": "Too"
+        },
+        {
+          "dev": "ते",
+          "latin": "Te"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "slug": "vrischika",
+      "name": "Vrischika",
+      "sounds": [
+        {
+          "dev": "तो",
+          "latin": "To"
+        },
+        {
+          "dev": "ना",
+          "latin": "Naa"
+        },
+        {
+          "dev": "नी",
+          "latin": "Nee"
+        },
+        {
+          "dev": "नू",
+          "latin": "Noo"
+        },
+        {
+          "dev": "ने",
+          "latin": "Ne"
+        },
+        {
+          "dev": "नो",
+          "latin": "No"
+        },
+        {
+          "dev": "या",
+          "latin": "Yaa"
+        },
+        {
+          "dev": "यी",
+          "latin": "Yee"
+        },
+        {
+          "dev": "यू",
+          "latin": "Yoo"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "slug": "dhanu",
+      "name": "Dhanu",
+      "sounds": [
+        {
+          "dev": "ये",
+          "latin": "Ye"
+        },
+        {
+          "dev": "यो",
+          "latin": "Yo"
+        },
+        {
+          "dev": "भा",
+          "latin": "Bhaa"
+        },
+        {
+          "dev": "भी",
+          "latin": "Bhee"
+        },
+        {
+          "dev": "भू",
+          "latin": "Bhoo"
+        },
+        {
+          "dev": "धा",
+          "latin": "Dhaa"
+        },
+        {
+          "dev": "फा",
+          "latin": "Phaa"
+        },
+        {
+          "dev": "भे",
+          "latin": "Bhe"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "slug": "makara",
+      "name": "Makara",
+      "sounds": [
+        {
+          "dev": "भो",
+          "latin": "Bho"
+        },
+        {
+          "dev": "जा",
+          "latin": "Jaa"
+        },
+        {
+          "dev": "जी",
+          "latin": "Jee"
+        },
+        {
+          "dev": "खी",
+          "latin": "Khee"
+        },
+        {
+          "dev": "खू",
+          "latin": "Khoo"
+        },
+        {
+          "dev": "खे",
+          "latin": "Khe"
+        },
+        {
+          "dev": "खो",
+          "latin": "Kho"
+        },
+        {
+          "dev": "गा",
+          "latin": "Gaa"
+        },
+        {
+          "dev": "गी",
+          "latin": "Gee"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "slug": "kumbha",
+      "name": "Kumbha",
+      "sounds": [
+        {
+          "dev": "गु",
+          "latin": "Gu"
+        },
+        {
+          "dev": "गे",
+          "latin": "Ge"
+        },
+        {
+          "dev": "गो",
+          "latin": "Go"
+        },
+        {
+          "dev": "सा",
+          "latin": "Saa"
+        },
+        {
+          "dev": "सी",
+          "latin": "See"
+        },
+        {
+          "dev": "सू",
+          "latin": "Soo"
+        },
+        {
+          "dev": "से",
+          "latin": "Se"
+        },
+        {
+          "dev": "सो",
+          "latin": "So"
+        },
+        {
+          "dev": "दा",
+          "latin": "Daa"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "slug": "meena",
+      "name": "Meena",
+      "sounds": [
+        {
+          "dev": "दी",
+          "latin": "Dee"
+        },
+        {
+          "dev": "दू",
+          "latin": "Doo"
+        },
+        {
+          "dev": "थ",
+          "latin": "Tha"
+        },
+        {
+          "dev": "झ",
+          "latin": "Jha"
+        },
+        {
+          "dev": "ञ",
+          "latin": "Yna"
+        },
+        {
+          "dev": "दे",
+          "latin": "De"
+        },
+        {
+          "dev": "दो",
+          "latin": "Do"
+        },
+        {
+          "dev": "च",
+          "latin": "Cha"
+        },
+        {
+          "dev": "ची",
+          "latin": "Chee"
+        }
+      ]
+    }
+  ]
+}

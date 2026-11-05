@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baby names by nakshatra & rashi</title>
+<style>
+  :root { --ink:#241a12; --ink2:#6b5a49; --line:#e7ddd0; --cloud:#f6f0e8; --sienna:#b4632f; --sienna2:#9c4f24; --bg:#fcf9f4; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 ui-sans-serif,system-ui,"Segoe UI",Roboto,sans-serif; }
+  .wrap { max-width:780px; margin:0 auto; padding:24px 16px 72px; }
+  h1 { font-size:clamp(26px,5vw,38px); line-height:1.1; letter-spacing:-.02em; margin:.2em 0 .1em; }
+  .sub { color:var(--ink2); margin:0 0 24px; }
+  form { background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px; display:grid; gap:14px; }
+  .row { display:grid; gap:14px; grid-template-columns:1fr 1fr; }
+  label { display:block; font-weight:600; font-size:14px; margin-bottom:6px; }
+  input, select { width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:10px; font:inherit; background:#fff; color:var(--ink); }
+  .pills { display:flex; flex-wrap:wrap; gap:8px; }
+  .pills button { border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:999px; padding:8px 14px; font:inherit; cursor:pointer; }
+  .pills button[aria-pressed="true"] { background:var(--sienna); border-color:var(--sienna); color:#fff; }
+  .go { background:var(--sienna); color:#fff; border:none; border-radius:10px; padding:13px; font:inherit; font-weight:700; cursor:pointer; }
+  .go:hover { background:var(--sienna2); }
+  .result { margin-top:28px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px; }
+  .big { font-size:22px; font-weight:700; }
+  .dev { font-size:22px; }
+  .muted { color:var(--ink2); font-size:14px; }
+  .sounds { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+  .sounds span { background:var(--cloud); border-radius:8px; padding:3px 9px; font-size:14px; }
+  .warn { margin-top:12px; background:#fdf2e6; border:1px solid #f0d6b8; border-radius:10px; padding:10px 12px; font-size:14px; }
+  h2 { font-size:18px; margin:26px 0 4px; }
+  .count { color:var(--ink2); font-weight:400; font-size:14px; }
+  ul.names { list-style:none; margin:10px 0 0; padding:0; display:grid; gap:8px; }
+  ul.names li { background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 14px; }
+  .nm { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+  .nm .en { font-weight:700; font-size:17px; }
+  .nm .ia { color:var(--ink2); font-size:14px; }
+  .mn { font-size:14px; margin-top:3px; }
+  .tag { font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:var(--sienna2); border:1px solid #e9cdb6; border-radius:6px; padding:1px 6px; }
+  .err { color:#a3331f; }
+  footer { margin-top:40px; color:var(--ink2); font-size:13px; }
+  a { color:var(--sienna2); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Baby names by nakshatra & rashi</h1>
+  <p class="sub">Enter the birth date, time and time zone. You get the Moon's nakshatra, pada and traditional starting sound, then every matching name with its meaning — no paywall.</p>
+
+  <form id="f">
+    <div class="row">
+      <div><label for="date">Date of birth</label><input type="date" id="date" required></div>
+      <div><label for="time">Time of birth (local)</label><input type="time" id="time" required></div>
+    </div>
+    <div>
+      <label for="tz">Time zone of birthplace</label>
+      <select id="tz"></select>
+      <div class="muted">Only the time zone affects the calculation. Default is India (IST).</div>
+    </div>
+    <div class="row">
+      <div>
+        <label>Names for</label>
+        <div class="pills" id="gender">
+          <button type="button" data-v="both" aria-pressed="true">Both</button>
+          <button type="button" data-v="girl" aria-pressed="false">Girl</button>
+          <button type="button" data-v="boy" aria-pressed="false">Boy</button>
+        </div>
+      </div>
+      <div>
+        <label>Style</label>
+        <div class="pills" id="style">
+          <button type="button" data-v="all" aria-pressed="true">All</button>
+          <button type="button" data-v="classical" aria-pressed="false">Classical</button>
+          <button type="button" data-v="modern" aria-pressed="false">Modern</button>
+        </div>
+      </div>
+    </div>
+    <button class="go" type="submit">Find names</button>
+  </form>
+
+  <div id="out" class="result" aria-live="polite"></div>
+
+  <footer>
+    Calculation runs entirely in your browser (Lahiri sidereal, astronomy-engine). Traditional naming guidance only — not a prediction.
+  </footer>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
