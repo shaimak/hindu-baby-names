@@ -22,6 +22,11 @@
   .pills { display:flex; flex-wrap:wrap; gap:8px; }
   .pills button { border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:999px; padding:8px 14px; font:inherit; cursor:pointer; }
   .pills button[aria-pressed="true"] { background:var(--maroon); border-color:var(--maroon); color:#fff; }
+  .citywrap { position:relative; }
+  .suggest { position:absolute; z-index:5; left:0; right:0; background:#fff; border:1px solid var(--line); border-top:none; border-radius:0 0 10px 10px; max-height:240px; overflow:auto; box-shadow:0 10px 24px rgba(60,20,0,.12); }
+  .suggest div { padding:9px 12px; cursor:pointer; font-size:14px; }
+  .suggest div:hover, .suggest div.active { background:var(--cloud); }
+  .suggest .ad { color:var(--ink2); }
   .go { background:var(--saffron); color:#fff; border:none; border-radius:10px; padding:13px; font:inherit; font-weight:700; cursor:pointer; }
   .go:hover { background:var(--saffron2); }
   .result { margin-top:28px; }
@@ -59,9 +64,12 @@
       <div><label for="time">Time of birth (local)</label><input type="time" id="time" required></div>
     </div>
     <div>
-      <label for="tz">Time zone of birthplace</label>
-      <select id="tz"></select>
-      <div class="muted">Only the time zone affects the calculation. Default is India (IST).</div>
+      <label for="city">City of birth</label>
+      <div class="citywrap">
+        <input type="text" id="city" autocomplete="off" placeholder="Start typing a city…">
+        <div id="suggest" class="suggest" hidden></div>
+      </div>
+      <div class="muted">Pick your birthplace — or the nearest city in the same time zone. <span id="tznote">Time zone: India (IST)</span></div>
     </div>
     <div class="row">
       <div>

@@ -12,11 +12,23 @@ const data = await Promise.all([
 if (!data) {
   out.innerHTML = '<p class="err">Could not load the name data.</p>';
 } else {
-  // time-zone dropdown, default IST
-  const tz = $("#tz");
-  const zones = (Intl.supportedValuesOf?.("timeZone")) || ["Asia/Kolkata", "UTC"];
-  const india = zones.includes("Asia/Kolkata") ? "Asia/Kolkata" : "Asia/Calcutta"; // ICU alias varies by engine
-  tz.innerHTML = zones.map((z) => `<option${z === india ? " selected" : ""}>${z}</option>`).join("");
+  // city search -> timezone (city list lazy-loaded on first focus); default India (IST)
+  const cityEl = $("#city"), sug = $("#suggest"), tznote = $("#tznote");
+  let citiesArr = null, selectedTz = "Asia/Kolkata";
+  const loadCities = async () => (citiesArr ||= await fetch("data/cities.json").then((r) => r.json()));
+  cityEl.addEventListener("focus", loadCities, { once: true });
+  const setCity = (r) => { cityEl.value = r[0]; selectedTz = r[3]; tznote.textContent = "Time zone: " + r[3] + " (" + [r[1], r[2]].filter(Boolean).join(", ") + ")"; sug.hidden = true; };
+  cityEl.addEventListener("input", async () => {
+    const q = cityEl.value.trim().toLowerCase();
+    if (q.length < 2) { sug.hidden = true; return; }
+    const list = (await loadCities()).filter((r) => r[0].toLowerCase().startsWith(q)).slice(0, 20);
+    if (!list.length) { sug.hidden = true; return; }
+    sug._list = list;
+    sug.innerHTML = list.map((r, i) => `<div data-i="${i}">${esc(r[0])} <span class="ad">— ${esc([r[1], r[2]].filter(Boolean).join(" · "))}</span></div>`).join("");
+    sug.hidden = false;
+  });
+  sug.addEventListener("mousedown", (e) => { const d = e.target.closest("div[data-i]"); if (d) setCity(sug._list[+d.dataset.i]); });
+  cityEl.addEventListener("blur", () => setTimeout(() => (sug.hidden = true), 150));
 
   // pill groups -> remember selected value on the container
   for (const id of ["gender", "style"]) {
@@ -32,7 +44,8 @@ if (!data) {
     e.preventDefault();
     const [y, mo, d] = $("#date").value.split("-").map(Number);
     const [h, mi] = $("#time").value.split(":").map(Number);
-    const utc = zonedTimeToUTC(y, mo, d, h, mi, tz.value);
+    if (citiesArr) { const m = citiesArr.find((r) => r[0].toLowerCase() === cityEl.value.trim().toLowerCase()); if (m) selectedTz = m[3]; }
+    const utc = zonedTimeToUTC(y, mo, d, h, mi, selectedTz);
     const r = reading(moonSidereal(utc), data.sounds);
     const { focused, broader } = matchNames(data.names, r, { gender: $("#gender").dataset.v, style: $("#style").dataset.v }, data.nakIdx);
     render(r, focused, broader);
