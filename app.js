@@ -47,16 +47,17 @@ if (!data) {
     if (citiesArr) { const m = citiesArr.find((r) => r[0].toLowerCase() === cityEl.value.trim().toLowerCase()); if (m) selectedTz = m[3]; }
     const utc = zonedTimeToUTC(y, mo, d, h, mi, selectedTz);
     const r = reading(moonSidereal(utc), data.sounds);
-    const { focused, broader } = matchNames(data.names, r, { gender: $("#gender").dataset.v, style: $("#style").dataset.v }, data.nakIdx);
-    render(r, focused, broader);
+    const style = $("#style").dataset.v;
+    const { focused, broader } = matchNames(data.names, r, { gender: $("#gender").dataset.v, style }, data.nakIdx);
+    render(r, focused, broader, style);
   });
 }
 
 const esc = (s) => (s || "").replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
 const isModern = (n) => /\bmodern\b|no mw lemma/i.test(n.etymology || "");
 
-function nameList(arr) {
-  if (!arr.length) return '<p class="muted">No names in the current collection for this filter.</p>';
+function nameList(arr, empty) {
+  if (!arr.length) return `<p class="muted">${empty || "No names in the current collection for this filter."}</p>`;
   return `<ul class="names">${arr.map((n) => `
     <li>
       <div class="nm">
@@ -69,8 +70,12 @@ function nameList(arr) {
     </li>`).join("")}</ul>`;
 }
 
-function render(r, focused, broader) {
+function render(r, focused, broader, style) {
   const sounds = r.rashi.sounds.map((s) => `<span>${esc(s.latin)}</span>`).join("");
+  const filt = style && style !== "all";
+  const hint = filt ? ` Set Style to “All” to see classical options.` : "";
+  const emptyF = `No ${filt ? style + " " : ""}names starting with ${esc(r.padaSound.latin)} in the collection.${hint}`;
+  const emptyB = `No ${filt ? style + " " : ""}names in ${esc(r.rashi.name)} rashi in the collection.${hint}`;
   out.innerHTML = `
     <div class="card">
       <div class="big">${esc(r.nakshatra.name)} <span class="dev">${esc(r.padaSound.dev || "")}</span> · ${esc(r.rashi.name)}</div>
@@ -81,8 +86,8 @@ function render(r, focused, broader) {
       ${r.nearBoundary ? `<div class="warn">The Moon is within half a degree of a pada boundary — a small change in the recorded birth time could change the reading.</div>` : ""}
     </div>
     <h2>Focused — ${esc(r.nakshatra.name)} pada ${r.pada} <span class="count">(${focused.length})</span></h2>
-    ${nameList(focused)}
+    ${nameList(focused, emptyF)}
     <h2>Broader — ${esc(r.rashi.name)} rashi <span class="count">(${broader.length})</span></h2>
-    ${nameList(broader)}`;
+    ${nameList(broader, emptyB)}`;
   out.scrollIntoView({ behavior: "smooth", block: "start" });
 }
