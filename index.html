@@ -4,12 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Baby names by nakshatra & rashi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  :root { --ink:#241a12; --ink2:#6b5a49; --line:#e7ddd0; --cloud:#f6f0e8; --sienna:#b4632f; --sienna2:#9c4f24; --bg:#fcf9f4; }
+  :root { --ink:#3a1410; --ink2:#7c4a38; --line:#ecd6bd; --cloud:#faeeda; --bg:#fdf7ec; --saffron:#e0781c; --saffron2:#c45e0b; --maroon:#8a1a1a; --gold:#b07d20; }
   * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 ui-sans-serif,system-ui,"Segoe UI",Roboto,sans-serif; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 ui-sans-serif,system-ui,"Segoe UI",Roboto,sans-serif; border-top:5px solid var(--saffron); }
   .wrap { max-width:780px; margin:0 auto; padding:24px 16px 72px; }
-  h1 { font-size:clamp(26px,5vw,38px); line-height:1.1; letter-spacing:-.02em; margin:.2em 0 .1em; }
+  h1 { font-size:clamp(26px,5vw,38px); line-height:1.1; letter-spacing:-.02em; margin:.2em 0 .1em; color:var(--maroon); }
+  h1 .om { color:var(--saffron); }
   .sub { color:var(--ink2); margin:0 0 24px; }
   form { background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px; display:grid; gap:14px; }
   .row { display:grid; gap:14px; grid-template-columns:1fr 1fr; }
@@ -17,18 +21,20 @@
   input, select { width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:10px; font:inherit; background:#fff; color:var(--ink); }
   .pills { display:flex; flex-wrap:wrap; gap:8px; }
   .pills button { border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:999px; padding:8px 14px; font:inherit; cursor:pointer; }
-  .pills button[aria-pressed="true"] { background:var(--sienna); border-color:var(--sienna); color:#fff; }
-  .go { background:var(--sienna); color:#fff; border:none; border-radius:10px; padding:13px; font:inherit; font-weight:700; cursor:pointer; }
-  .go:hover { background:var(--sienna2); }
+  .pills button[aria-pressed="true"] { background:var(--maroon); border-color:var(--maroon); color:#fff; }
+  .go { background:var(--saffron); color:#fff; border:none; border-radius:10px; padding:13px; font:inherit; font-weight:700; cursor:pointer; }
+  .go:hover { background:var(--saffron2); }
   .result { margin-top:28px; }
   .card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px; }
-  .big { font-size:22px; font-weight:700; }
+  .card { border-top:3px solid var(--gold); }
+  .big { font-size:22px; font-weight:700; color:var(--maroon); }
+  .dev, h1 .om { font-family:"Noto Sans Devanagari",serif; }
   .dev { font-size:22px; }
   .muted { color:var(--ink2); font-size:14px; }
   .sounds { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
   .sounds span { background:var(--cloud); border-radius:8px; padding:3px 9px; font-size:14px; }
   .warn { margin-top:12px; background:#fdf2e6; border:1px solid #f0d6b8; border-radius:10px; padding:10px 12px; font-size:14px; }
-  h2 { font-size:18px; margin:26px 0 4px; }
+  h2 { font-size:18px; margin:26px 0 4px; color:var(--maroon); }
   .count { color:var(--ink2); font-weight:400; font-size:14px; }
   ul.names { list-style:none; margin:10px 0 0; padding:0; display:grid; gap:8px; }
   ul.names li { background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 14px; }
@@ -36,15 +42,15 @@
   .nm .en { font-weight:700; font-size:17px; }
   .nm .ia { color:var(--ink2); font-size:14px; }
   .mn { font-size:14px; margin-top:3px; }
-  .tag { font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:var(--sienna2); border:1px solid #e9cdb6; border-radius:6px; padding:1px 6px; }
+  .tag { font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:var(--gold); border:1px solid #e3c38f; border-radius:6px; padding:1px 6px; }
   .err { color:#a3331f; }
   footer { margin-top:40px; color:var(--ink2); font-size:13px; }
-  a { color:var(--sienna2); }
+  a { color:var(--maroon); }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>Baby names by nakshatra & rashi</h1>
+  <h1><span class="om" aria-hidden="true">ॐ</span> Baby names by nakshatra &amp; rashi</h1>
   <p class="sub">Enter the birth date, time and time zone. You get the Moon's nakshatra, pada and traditional starting sound, then every matching name with its meaning — no paywall.</p>
 
   <form id="f">
