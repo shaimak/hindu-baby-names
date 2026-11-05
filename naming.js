@@ -61,11 +61,14 @@ export function buildNakIndex(sounds) {
   return Object.fromEntries(sounds.nakshatras.map((n) => [norm(n.name), n.index]));
 }
 
+export const isModern = (n) => /\bmodern\b|no mw lemma/i.test(n.etymology || "");
+
 // Split names into the focused (nakshatra+pada) and broader (rashi) lists, filtered by gender/style.
-export function matchNames(names, r, { gender = "both", style = "all" } = {}, nakIndexByName) {
+// styles: array of selected style keys. Only "modern"/"traditional" are data-backed; others are UI-only.
+export function matchNames(names, r, { gender = "both", styles = [] } = {}, nakIndexByName) {
   const genderOk = (n) => gender === "both" || !n.gender || n.gender === (gender === "boy" ? "boys" : "girls");
-  const isModern = (n) => /\bmodern\b|no mw lemma/i.test(n.etymology || "");
-  const styleOk = (n) => style === "all" || (style === "modern" ? isModern(n) : !isModern(n));
+  const real = styles.filter((s) => s === "modern" || s === "traditional");
+  const styleOk = (n) => real.length === 0 || real.some((s) => (s === "modern") === isModern(n));
   const ok = (n) => genderOk(n) && styleOk(n);
 
   const focused = names.filter((n) => norm(n.nakshatra) === norm(r.nakshatra.name) && n.pada === r.pada && ok(n));

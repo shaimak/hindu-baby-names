@@ -13,32 +13,48 @@
   body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 ui-sans-serif,system-ui,"Segoe UI",Roboto,sans-serif; border-top:5px solid var(--saffron); }
   .wrap { max-width:780px; margin:0 auto; padding:24px 16px 72px; }
   h1 { font-size:clamp(26px,5vw,38px); line-height:1.1; letter-spacing:-.02em; margin:.2em 0 .1em; color:var(--maroon); }
-  h1 .om { color:var(--saffron); }
-  .sub { color:var(--ink2); margin:0 0 24px; }
-  form { background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px; display:grid; gap:14px; }
+  h1 .om { color:var(--saffron); font-family:"Noto Sans Devanagari",serif; }
+  .sub { color:var(--ink2); margin:0 0 22px; }
+
+  /* step indicator */
+  .steps { display:flex; gap:8px; list-style:none; padding:0; margin:0 0 20px; font-size:13px; }
+  .steps li { flex:1; text-align:center; padding:8px 6px; border-radius:10px; background:#fff; border:1px solid var(--line); color:var(--ink2); }
+  .steps li .n { display:inline-flex; width:20px; height:20px; border-radius:50%; background:var(--cloud); color:var(--maroon); align-items:center; justify-content:center; font-weight:700; margin-right:6px; font-size:12px; }
+  .steps li[aria-current="true"] { border-color:var(--saffron); color:var(--maroon); font-weight:600; }
+  .steps li[aria-current="true"] .n { background:var(--saffron); color:#fff; }
+
+  .card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px; }
+  .step { display:grid; gap:16px; }
   .row { display:grid; gap:14px; grid-template-columns:1fr 1fr; }
   @media (max-width:560px) { .row { grid-template-columns:1fr; } }
   label { display:block; font-weight:600; font-size:14px; margin-bottom:6px; }
-  input, select { width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:10px; font:inherit; background:#fff; color:var(--ink); }
-  .pills { display:flex; flex-wrap:wrap; gap:8px; }
-  .pills button { border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:999px; padding:8px 14px; font:inherit; cursor:pointer; }
-  .pills button[aria-pressed="true"] { background:var(--maroon); border-color:var(--maroon); color:#fff; }
+  input { width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:10px; font:inherit; background:#fff; color:var(--ink); }
   .citywrap { position:relative; }
   .suggest { position:absolute; z-index:5; left:0; right:0; background:#fff; border:1px solid var(--line); border-top:none; border-radius:0 0 10px 10px; max-height:240px; overflow:auto; box-shadow:0 10px 24px rgba(60,20,0,.12); }
   .suggest div { padding:9px 12px; cursor:pointer; font-size:14px; }
   .suggest div:hover, .suggest div.active { background:var(--cloud); }
   .suggest .ad { color:var(--ink2); }
-  .go { background:var(--saffron); color:#fff; border:none; border-radius:10px; padding:13px; font:inherit; font-weight:700; cursor:pointer; }
-  .go:hover { background:var(--saffron2); }
-  .result { margin-top:28px; }
-  .card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px; }
-  .card { border-top:3px solid var(--gold); }
-  .big { font-size:22px; font-weight:700; color:var(--maroon); }
-  .dev, h1 .om { font-family:"Noto Sans Devanagari",serif; }
-  .dev { font-size:22px; }
+
+  .group { display:block; }
+  .eyebrow { font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink2); margin-bottom:8px; }
+  .pills { display:flex; flex-wrap:wrap; gap:8px; }
+  .pills button { border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:999px; padding:8px 14px; font:inherit; cursor:pointer; }
+  .pills button[aria-pressed="true"] { background:var(--maroon); border-color:var(--maroon); color:#fff; }
+  .note { font-size:12.5px; color:var(--ink2); background:var(--cloud); border-radius:8px; padding:8px 10px; }
   .muted { color:var(--ink2); font-size:14px; }
+
+  .actions { display:flex; gap:10px; }
+  .go { background:var(--saffron); color:#fff; border:none; border-radius:10px; padding:13px 18px; font:inherit; font-weight:700; cursor:pointer; flex:1; }
+  .go:hover { background:var(--saffron2); }
+  .back { background:#fff; color:var(--maroon); border:1px solid var(--line); border-radius:10px; padding:13px 18px; font:inherit; cursor:pointer; }
+
+  .result { margin-top:4px; }
+  .editbar { margin-bottom:14px; }
+  .big { font-size:22px; font-weight:700; color:var(--maroon); }
+  .dev { font-family:"Noto Sans Devanagari",serif; font-size:22px; }
   .sounds { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
   .sounds span { background:var(--cloud); border-radius:8px; padding:3px 9px; font-size:14px; }
+  .sounds span.hit { background:var(--saffron); color:#fff; }
   .warn { margin-top:12px; background:#fdf2e6; border:1px solid #f0d6b8; border-radius:10px; padding:10px 12px; font-size:14px; }
   h2 { font-size:18px; margin:26px 0 4px; color:var(--maroon); }
   .count { color:var(--ink2); font-weight:400; font-size:14px; }
@@ -52,48 +68,79 @@
   .err { color:#a3331f; }
   footer { margin-top:40px; color:var(--ink2); font-size:13px; }
   a { color:var(--maroon); }
+  [hidden] { display:none !important; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1><span class="om" aria-hidden="true">ॐ</span> Baby names by nakshatra &amp; rashi</h1>
-  <p class="sub">Enter the birth date, time and time zone. You get the Moon's nakshatra, pada and traditional starting sound, then every matching name with its meaning — no paywall.</p>
+  <p class="sub">Three steps: birth details, the kind of name you want, then every matching name with its meaning — no paywall.</p>
 
-  <form id="f">
-    <div class="row">
-      <div><label for="date">Date of birth</label><input type="date" id="date" required></div>
-      <div><label for="time">Time of birth (local)</label><input type="time" id="time" required></div>
-    </div>
-    <div>
-      <label for="city">City of birth</label>
-      <div class="citywrap">
-        <input type="text" id="city" autocomplete="off" placeholder="Start typing a city…">
-        <div id="suggest" class="suggest" hidden></div>
+  <ol class="steps" id="steps">
+    <li data-step="1" aria-current="true"><span class="n">1</span>Birth details</li>
+    <li data-step="2"><span class="n">2</span>Preferences</li>
+    <li data-step="3"><span class="n">3</span>Names</li>
+  </ol>
+
+  <form id="f" autocomplete="off">
+    <!-- Step 1 -->
+    <section class="step card" data-step="1">
+      <div class="row">
+        <div><label for="date">Date of birth</label><input type="date" id="date" required></div>
+        <div><label for="time">Time of birth (local)</label><input type="time" id="time" required></div>
       </div>
-      <div class="muted">Pick your birthplace — or the nearest city in the same time zone. <span id="tznote">Time zone: India (IST)</span></div>
-    </div>
-    <div class="row">
       <div>
-        <label>Names for</label>
-        <div class="pills" id="gender">
+        <label for="city">City of birth</label>
+        <div class="citywrap">
+          <input type="text" id="city" placeholder="Start typing a city…">
+          <div id="suggest" class="suggest" hidden></div>
+        </div>
+        <div class="muted">Pick your birthplace — or the nearest city in the same time zone. <span id="tznote">Time zone: India (IST)</span></div>
+      </div>
+      <div class="group">
+        <div class="eyebrow">Names for</div>
+        <div class="pills" id="gender" data-mode="single">
           <button type="button" data-v="both" aria-pressed="true">Both</button>
           <button type="button" data-v="girl" aria-pressed="false">Girl</button>
           <button type="button" data-v="boy" aria-pressed="false">Boy</button>
         </div>
       </div>
+      <div class="actions"><button type="button" class="go" id="toStep2">Continue →</button></div>
+    </section>
+
+    <!-- Step 2 -->
+    <section class="step card" data-step="2" hidden>
       <div>
-        <label>Style</label>
-        <div class="pills" id="style">
-          <button type="button" data-v="all" aria-pressed="true">All</button>
-          <button type="button" data-v="classical" aria-pressed="false">Classical</button>
+        <div class="big" style="font-size:19px">What kind of name are you looking for?</div>
+        <div class="muted">Optional — pick any, or skip.</div>
+      </div>
+      <div class="group">
+        <div class="eyebrow">Style · pick any</div>
+        <div class="pills" id="style" data-mode="multi">
           <button type="button" data-v="modern" aria-pressed="false">Modern</button>
+          <button type="button" data-v="timeless" aria-pressed="false">Timeless</button>
+          <button type="button" data-v="traditional" aria-pressed="false">Traditional</button>
+          <button type="button" data-v="rare" aria-pressed="false">Rare &amp; distinctive</button>
         </div>
       </div>
-    </div>
-    <button class="go" type="submit">Find names</button>
+      <div class="group">
+        <div class="eyebrow">How familiar should it feel · pick any</div>
+        <div class="pills" id="familiarity" data-mode="multi">
+          <button type="button" data-v="well_known" aria-pressed="false">Well-known</button>
+          <button type="button" data-v="uncommon" aria-pressed="false">Uncommon</button>
+          <button type="button" data-v="very_rare" aria-pressed="false">Very rare</button>
+        </div>
+      </div>
+      <div class="note">Modern, Traditional and gender filter the results. Timeless, Rare &amp; distinctive and the familiarity scale are shown for now but don’t filter yet — they need a name-popularity dataset we haven’t added.</div>
+      <div class="actions">
+        <button type="button" class="back" id="backTo1">← Back</button>
+        <button type="submit" class="go">Show my names →</button>
+      </div>
+    </section>
   </form>
 
-  <div id="out" class="result" aria-live="polite"></div>
+  <!-- Step 3 -->
+  <div id="out" class="result" aria-live="polite" hidden></div>
 
   <footer>
     Calculation runs entirely in your browser (Lahiri sidereal, astronomy-engine). Traditional naming guidance only — not a prediction.
