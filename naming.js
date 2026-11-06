@@ -69,10 +69,12 @@ export function matchNames(names, r, { gender = "both", styles = [] } = {}, nakI
   const genderOk = (n) => gender === "both" || !n.gender || n.gender === (gender === "boy" ? "boys" : "girls");
   const real = styles.filter((s) => s === "modern" || s === "traditional");
   const styleOk = (n) => real.length === 0 || real.some((s) => (s === "modern") === isModern(n));
-  const ok = (n) => genderOk(n) && styleOk(n);
 
-  const focused = names.filter((n) => norm(n.nakshatra) === norm(r.nakshatra.name) && n.pada === r.pada && ok(n));
+  // Focused = the exact pada sound from the birth reading. It's the primary astrological
+  // result, so it's always shown (gender only) — a style preference never empties it.
+  const focused = names.filter((n) => norm(n.nakshatra) === norm(r.nakshatra.name) && n.pada === r.pada && genderOk(n));
   const focusedSlugs = new Set(focused.map((n) => n.slug));
-  const broader = names.filter((n) => nameRashiIndex(n, nakIndexByName) === r.rashiIndex && ok(n) && !focusedSlugs.has(n.slug));
+  // Broader = the rest of the rashi; here the style preference does filter.
+  const broader = names.filter((n) => nameRashiIndex(n, nakIndexByName) === r.rashiIndex && genderOk(n) && styleOk(n) && !focusedSlugs.has(n.slug));
   return { focused, broader };
 }

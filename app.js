@@ -88,8 +88,8 @@ function nameList(arr, empty) {
 function render(r, focused, broader, styles, showStep) {
   const real = styles.filter((s) => s === "modern" || s === "traditional");
   const filt = real.length > 0 ? real.join("/") + " " : "";
-  const emptyF = `No ${filt}names starting with ${esc(r.padaSound.latin)} in the collection.`;
-  const emptyB = `No ${filt}names in ${esc(r.rashi.name)} rashi in the collection.`;
+  const emptyF = `No names starting with ${esc(r.padaSound.latin)} in the collection yet.`;
+  const emptyB = `No other ${filt}names in ${esc(r.rashi.name)} rashi in the collection.`;
   const sounds = r.rashi.sounds.map((s) => `<span class="${s.latin === r.padaSound.latin ? "hit" : ""}">${esc(s.latin)}</span>`).join("");
   out.innerHTML = `
     <div class="editbar"><button type="button" class="back" id="edit">← Edit details</button></div>
@@ -101,9 +101,11 @@ function render(r, focused, broader, styles, showStep) {
       <div class="sounds">${sounds}</div>
       ${r.nearBoundary ? `<div class="warn">The Moon is within half a degree of a pada boundary — a small change in the recorded birth time could change the reading.</div>` : ""}
     </div>
-    <h2>Focused — ${esc(r.nakshatra.name)} pada ${r.pada} <span class="count">(${focused.length})</span></h2>
+    <h2>Your sound — ${esc(r.padaSound.latin)} <span class="dev">${esc(r.padaSound.dev || "")}</span> <span class="count">(${focused.length})</span></h2>
+    <p class="muted" style="margin:0">${esc(r.nakshatra.name)} pada ${r.pada} — every matching name, modern and classical.</p>
     ${nameList(focused, emptyF)}
-    <h2>Broader — ${esc(r.rashi.name)} rashi <span class="count">(${broader.length})</span></h2>
+    <h2>More in your rashi — ${esc(r.rashi.name)} <span class="count">(${broader.length})</span></h2>
+    <p class="muted" style="margin:0">Other sounds in the same rashi${filt ? " · " + esc(filt.trim()) + " only" : ""}.</p>
     ${nameList(broader, emptyB)}`;
   $("#edit").addEventListener("click", () => showStep(1));
 }
